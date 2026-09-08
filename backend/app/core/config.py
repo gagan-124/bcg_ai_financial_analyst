@@ -20,6 +20,10 @@ class Settings(BaseSettings):
         default="http://localhost:5173,http://127.0.0.1:5173",
         description="Comma-separated list of allowed CORS origins",
     )
+    CORS_ORIGIN_REGEX: str | None = Field(
+        default=None,
+        description="Optional regex pattern for allowed CORS origins (e.g. Vercel previews)",
+    )
 
     # SEC configuration
     FINANCIAL_DATA_MODE: str = Field(default="fixture")

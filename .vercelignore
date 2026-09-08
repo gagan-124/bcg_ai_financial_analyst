@@ -1,0 +1,33 @@
+# Version control & CI/CD
+.git
+.github
+
+# Testing & Lint caches
+.pytest_cache
+.ruff_cache
+backend/.pytest_cache
+backend/.ruff_cache
+backend/tests
+
+# Virtual environments
+.venv
+venv
+backend/.venv
+
+# Local environment files (security)
+.env
+backend/.env
+.env.local
+.env.*.local
+*.env
+
+# Data caches and raw artifacts
+data/raw/*
+data/processed/*
+notebooks
+
+# Local tooling & IDE configs
+.vscode
+.idea
+docker-compose.yml
+rulebook.md
