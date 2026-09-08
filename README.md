@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # BCG AI Financial Analyst
 
 An AI-powered financial analysis platform that lets users analyze public-company financial performance through natural-language queries.
@@ -175,3 +176,7 @@ bcg-ai-financial-analyst/
 ├── docker-compose.yml        # Docker Compose orchestration
 └── rulebook.md               # Engineering principles & 6-stage lifecycle
 ```
+=======
+# bcg_ai_financial_analyst
+AI-powered financial analysis using SEC EDGAR/XBRL, deterministic Python analytics, and LLM reasoning.
+>>>>>>> origin/main
