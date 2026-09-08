@@ -1,0 +1,50 @@
+# Node / Frontend
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.vite/
+frontend/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python / Backend
+__pycache__/
+backend/__pycache__/
+backend/*/__pycache__/
+backend/*/*/__pycache__/
+backend/*/*/*/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+backend/.pytest_cache/
+.ruff_cache/
+backend/.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+ENV/
+env/
+
+# Environment variables
+.env
+backend/.env
+.env.local
+.env.*.local
+*.env
+
+# Data artifacts
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/sample/*
+!data/sample/.gitkeep
+
+# IDE & OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

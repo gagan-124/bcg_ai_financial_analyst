@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+
+    /* Core Locked Colors */
+    --color-bg: #092328;
+    --color-surface: #12544F;
+    --color-surface-hover: #17655F;
+    --color-primary: #2A835F;
+    --color-primary-hover: #339A70;
+    --color-accent: #8BBB92;
+
+    /* Semantic Typography & Foreground Tokens */
+    --color-text-primary: #F0F6F5;
+    --color-text-secondary: #9EBDB9;
+    --color-text-muted: #5D8480;
+
+    /* Structural Hairline Borders */
+    --color-border-hairline: rgba(255, 255, 255, 0.07);
+    --color-border-subtle: rgba(139, 187, 146, 0.16);
+
+    /* Typography */
+    --font-sans: 'Supreme', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    /* Spatial & Layout Tokens */
+    --content-max-width: 1100px;
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+
+    /* Architectural Neumorphism: Restrained Dual-Direction Shadows & Micro-Highlights */
+    --shadow-neumorphic-card: inset 0 1px 0 0 rgba(255, 255, 255, 0.05), 0 2px 6px 0 rgba(0, 0, 0, 0.35);
+    --shadow-neumorphic-elevated: inset 0 1px 0 0 rgba(255, 255, 255, 0.08), 0 4px 12px 0 rgba(0, 0, 0, 0.4);
+    --shadow-neumorphic-inset: inset 0 1px 2px 0 rgba(0, 0, 0, 0.35);
+
+    /* Functional Transitions */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Universal Tabular Lining Figures for Numbers & Financial Metrics */
+  .tabular-nums,
+  [data-tabular-numbers] {
+    font-variant-numeric: tabular-nums lining-nums;
+    font-feature-settings: 'tnum' 1, 'zero' 1;
+  }
+
+  /* Custom Institutional Minimal Dark Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-sm);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  /* Focus Ring Primitive Defaults */
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+/* Accessibility: Respect Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
